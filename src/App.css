@@ -161,9 +161,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
   }
   .box > div {
-    width: 45%;
+    width: 47%;
   }
   
   .fa {
@@ -276,5 +277,13 @@
   .total-container button:hover {
     background-color: rgb(160, 231, 223);
     cursor: pointer;
+  }
+  .error {
+    color: red;
+    position: absolute;
+    left: 31%
+  }
+  .disable {
+    background-color: rgb(13, 104, 109) !important;
   }
 }

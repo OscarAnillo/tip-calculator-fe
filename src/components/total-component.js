@@ -1,4 +1,4 @@
-export default function TotalComponent({ tipAmount, totalPerson, clickHandlerReset }) {
+export default function TotalComponent({ tipAmount, totalPerson, clickHandlerReset, billValue,numberPeople }) {
     return (
         <div className="total-container">
             <div className="total-box">
@@ -17,7 +17,7 @@ export default function TotalComponent({ tipAmount, totalPerson, clickHandlerRes
                     <h1>${totalPerson}</h1>
                 </div>
         </div>
-        <button onClick={clickHandlerReset}>Reset</button>
+        <button type="button" disabled={!billValue || numberPeople === 0 || numberPeople === ""} className={`${!billValue && 'disable'} `} onClick={clickHandlerReset}>Reset</button>
         </div>
     )
 }

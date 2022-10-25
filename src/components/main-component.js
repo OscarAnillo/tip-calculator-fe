@@ -18,6 +18,10 @@ export default function MainComponent(){
     }
     
     const clickHandler = (e) => {
+        if(!billValue || !numberPeople || numberPeople === '0'){
+            alert("Please provide the values.");
+            return;
+        }
         let tipGross = (billValue * e.target.value) / numberPeople;
         let totalTip =(billValue / numberPeople) + tipGross;
 
@@ -26,6 +30,7 @@ export default function MainComponent(){
         totalTip = totalTip.toFixed(2);
         setTipAmount(tipGross);
         setTotalPerson(totalTip);
+
         return totalPerson;
     }
 
@@ -50,12 +55,12 @@ export default function MainComponent(){
                     <ButtonCommon value={.25} text="25" className="btn" onClick={clickHandler} />
                     <ButtonCommon value={.5} text="50" className="btn space" onClick={clickHandler} />
                     <InputText className="custom" placeholder="Custom"/>
-                    <h4 className="number">Number of People</h4>
+                    <h4 className="number">Number of People {numberPeople === '0' ? <span className='error'>Can't be zero</span>:""}</h4>
                     <i className="fa fa-user icon" />
                     <InputText type="text" placeholder="0" value={numberPeople} onChange={numberPeopleHandler} />
                 </div>
                 <div>
-                    <TotalComponent tipAmount={tipAmount} totalPerson={totalPerson} clickHandlerReset={clickHandlerReset}/>
+                    <TotalComponent tipAmount={tipAmount} totalPerson={totalPerson} clickHandlerReset={clickHandlerReset} billValue={billValue} numberPeople={numberPeople} />
                 </div>
             </div>
         </div>
