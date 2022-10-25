@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
 
 * {
   margin: 0;
@@ -6,7 +6,7 @@
 }
 
 .App {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   background-color: rgb(197, 228, 231);
   height: 100vh;
   text-align: center;
@@ -20,11 +20,9 @@
 /* TitleComponent */
 .title {
   color: hsl(183, 100%, 15%);
-  letter-spacing: .4em;
+  letter-spacing: 0.4em;
   text-transform: uppercase;
-
 }
-
 
 /* MainComponent  */
 .main-bg {
@@ -42,7 +40,7 @@
 }
 .bill {
   color: hsl(186, 14%, 43%);
-  padding-bottom: .5em;
+  padding-bottom: 0.5em;
 }
 .fa {
   position: absolute;
@@ -59,12 +57,12 @@
   border: none;
   width: 90%;
   margin: 0 auto 1.5em 0;
-  padding: .8em 1em;
+  padding: 0.8em 1em;
   text-align: right;
   color: hsl(183, 100%, 15%);
   background-color: rgb(243, 240, 255);
   outline: none;
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 1rem;
 }
 .box input::placeholder {
@@ -80,32 +78,31 @@
   border: none;
   border-radius: 5px;
   color: #fff;
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 1.3rem;
   width: 45%;
-  padding: .5em 0;
-  margin: .3em 0;
+  padding: 0.5em 0;
+  margin: 0.3em 0;
 }
 .space {
   margin-right: 1.5em;
 }
 .box .custom {
   color: hsl(183, 100%, 15%);
-  background-color: rgb(243, 240, 255); 
+  background-color: rgb(243, 240, 255);
   border: none;
   border-radius: 5px;
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 1.3rem;
   width: 45%;
-  padding: .5em 0;
-  margin: .5em 0;
+  padding: 0.5em 0;
+  margin: 0.5em 0;
   text-align: center;
 }
 .number {
   color: hsl(186, 14%, 43%);
   margin: 1em 0;
 }
-
 
 /* TotalComponent */
 .total-container {
@@ -122,8 +119,8 @@
   margin: auto;
 }
 .total-box p {
-  color:#fff;
-  margin: .5em 0;
+  color: #fff;
+  margin: 0.5em 0;
   text-align: left;
 }
 .total-box span {
@@ -137,11 +134,133 @@
   background: rgb(36, 195, 173);
   border: none;
   border-radius: 5px;
-  margin-top: .5em;
-  padding: .5em 0;
+  margin-top: 0.5em;
+  padding: 0.5em 0;
   width: 90%;
   text-transform: uppercase;
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-weight: 700;
   font-size: 1.3rem;
+}
+
+@media (min-width: 1000px) {
+  .container {
+    max-width: 950px;
+    margin: auto;
+    padding-top: 7em;
+  }
+
+  /* MainComponent  */
+  .main-bg {
+    border-radius: 30px;
+    margin-top: 2.5em;
+    padding: 2em 0;
+    text-align: left;
+  }
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .box > div {
+    width: 45%;
+  }
+  
+  .fa {
+    position: absolute;
+    height: 30px;
+    width: 60px;
+  }
+  .icon {
+    padding: 18px 10px;
+    min-width: 40px;
+    color: rgb(166, 187, 188);
+  }
+
+  .box input {
+    border: none;
+    width: 90%;
+    margin: 0 auto 1.5em 0;
+    padding: 0.8em 1em;
+    text-align: right;
+    color: hsl(183, 100%, 15%);
+    background-color: rgb(243, 240, 255);
+    outline: none;
+    font-family: "Space Mono", monospace;
+    font-size: 1rem;
+  }
+  .box input::placeholder {
+    color: rgb(166, 187, 188);
+  }
+
+  .select {
+    color: hsl(186, 14%, 43%);
+  }
+
+  .btn {
+    width: 30%;
+    margin: 0.4em 0.5em 0.4em 0;
+  }
+  .space {
+    margin-right: 0.5em;
+  }
+  .box .custom {
+    color: rgb(71, 103, 102);
+    background-color: rgb(243, 240, 255);
+    border: none;
+    border-radius: 5px;
+    font-family: "Space Mono", monospace;
+    font-size: 1.3rem;
+    width: 30%;
+    padding: 0.5em 0;
+    margin: 0.3em 0;
+    text-align: center;
+  }
+  .box .custom::placeholder {
+    color: rgb(71, 103, 102);
+  }
+  .number {
+    color: hsl(186, 14%, 43%);
+    margin: 1em 0;
+  }
+
+  /* TotalComponent */
+  .total-container {
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 20px;
+    padding: 2em 0;
+    height: 370px;
+    text-align: center;
+  }
+  .total-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+  }
+  .total-box p {
+    color: #fff;
+    margin: 0.5em 0;
+    text-align: left;
+  }
+  .total-box span {
+    color: hsl(186, 14%, 43%);
+  }
+  .total-box h1 {
+    color: rgb(36, 195, 173);
+  }
+  .total-container button {
+    color: hsl(183, 100%, 15%);
+    background: rgb(36, 195, 173);
+    border: none;
+    border-radius: 5px;
+    margin-top: 8em;
+    padding: 0.5em 0;
+    width: 90%;
+    text-transform: uppercase;
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
 }
