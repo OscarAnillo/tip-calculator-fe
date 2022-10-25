@@ -61,7 +61,7 @@
   text-align: right;
   color: hsl(183, 100%, 15%);
   background-color: rgb(243, 240, 255);
-  outline: none;
+  /* outline: none; */
   font-family: "Space Mono", monospace;
   font-size: 1rem;
 }
@@ -185,9 +185,13 @@
     text-align: right;
     color: hsl(183, 100%, 15%);
     background-color: rgb(243, 240, 255);
-    outline: none;
+    outline-color: rgb(88, 165, 155);;
     font-family: "Space Mono", monospace;
     font-size: 1rem;
+  }
+  .box input:hover {
+    cursor: pointer;
+    border-radius: 5px;
   }
   .box input::placeholder {
     color: rgb(166, 187, 188);
@@ -200,6 +204,11 @@
   .btn {
     width: 30%;
     margin: 0.4em 0.5em 0.4em 0;
+  }
+  .btn:hover {
+    background-color: rgb(160, 231, 223);
+    color: hsl(183, 100%, 15%);
+    cursor: pointer;
   }
   .space {
     margin-right: 0.5em;
@@ -262,5 +271,10 @@
     font-family: "Space Mono", monospace;
     font-weight: 700;
     font-size: 1.3rem;
+    transition: all .4s;
+  }
+  .total-container button:hover {
+    background-color: rgb(160, 231, 223);
+    cursor: pointer;
   }
 }
