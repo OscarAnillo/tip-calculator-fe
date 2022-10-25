@@ -1,9 +1,9 @@
 export default function ButtonCommon(props) {
-    const {value, className} = props;
+    const {value, text, className, onClick} = props;
 
     return (
-        <button className={className}>
-            {value}
+        <button value={value} className={className} onClick={onClick}>
+            {text}%
         </button>
     )
 }

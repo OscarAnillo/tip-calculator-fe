@@ -1,4 +1,4 @@
-export default function TotalComponent() {
+export default function TotalComponent({ tipAmount, totalPerson, clickHandlerReset }) {
     return (
         <div className="total-container">
             <div className="total-box">
@@ -6,7 +6,7 @@ export default function TotalComponent() {
                     <p>Tip Amount<br /><span>/ person</span></p>
                 </div>
                 <div>
-                    <h1>4.27</h1>
+                    <h1>${tipAmount}</h1>
                 </div>
             </div>
             <div className="total-box">
@@ -14,10 +14,10 @@ export default function TotalComponent() {
                     <p>Total<br /><span>/ person</span></p>
                 </div>
                 <div>
-                    <h1>32.79</h1>
+                    <h1>${totalPerson}</h1>
                 </div>
         </div>
-        <button>Reset</button>
+        <button onClick={clickHandlerReset}>Reset</button>
         </div>
     )
 }

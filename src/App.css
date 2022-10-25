@@ -52,7 +52,7 @@
 .icon {
   padding: 18px 10px;
   min-width: 40px;
-  color: rgb(197, 228, 231);
+  color: rgb(166, 187, 188);
 }
 
 .box input {
@@ -67,6 +67,10 @@
   font-family: 'Space Mono', monospace;
   font-size: 1rem;
 }
+.box input::placeholder {
+  color: rgb(166, 187, 188);
+}
+
 .select {
   color: hsl(186, 14%, 43%);
 }
@@ -85,7 +89,7 @@
 .space {
   margin-right: 1.5em;
 }
-.custom {
+.box .custom {
   color: hsl(183, 100%, 15%);
   background-color: rgb(243, 240, 255); 
   border: none;
@@ -95,6 +99,7 @@
   width: 45%;
   padding: .5em 0;
   margin: .5em 0;
+  text-align: center;
 }
 .number {
   color: hsl(186, 14%, 43%);
@@ -128,6 +133,7 @@
   color: rgb(36, 195, 173);
 }
 .total-container button {
+  color: hsl(183, 100%, 15%);
   background: rgb(36, 195, 173);
   border: none;
   border-radius: 5px;
